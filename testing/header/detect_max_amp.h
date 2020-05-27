@@ -1,6 +1,6 @@
 
 //define local variable(s) here.  Use static keyword to keep local, e.g:
-  static int i = 0; // defines a local int named i
+  static int i1 = 0; // defines a local int named i
   static int  max = 0;
 /* complete the state machine. */
 
@@ -9,7 +9,7 @@ void Detect_Max_Amp()
     switch(detect_max_amp_state)
     {
         case DMAInit:
-	    i++;
+	    i1++;
 	    if(i <= 10) {
 		if((~PINA & 0xF8) > max) {
 			max = (~PINA & 0xF8);
@@ -17,7 +17,7 @@ void Detect_Max_Amp()
 		detect_max_amp_state = DMAInit;
 	    }
 	    else {
-		    i = 0;
+		    i1 = 0;
 	    }
             break;
         

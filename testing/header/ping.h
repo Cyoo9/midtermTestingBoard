@@ -1,6 +1,6 @@
 
 //define local variable(s) here.  Use static keyword to keep local, e.g:
- static int i;  // defines a local int named i
+ static int i4 = 0;  // defines a local int named i
 
 
 
@@ -11,11 +11,11 @@ void Ping()
     switch(ping_state)
     {
         case PInit:
-	    i = 0;
+	    i4 = 0;
             break;
         default:
-	    i++
-	    if(i > 9) {		    
+	    i4++;
+	    if(i4 > 9) {		    
            	 ping_state = PInit;
 	    }
             break;
